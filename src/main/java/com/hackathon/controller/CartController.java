@@ -1,4 +1,4 @@
-package com.hackathon.razoraiapplication.controller;
+package com.hackathon.controller;
 
 
 import com.hackathon.dto.AddToCartRequest;

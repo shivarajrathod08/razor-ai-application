@@ -1,4 +1,4 @@
-package com.hackathon.razoraiapplication.controller;
+package com.hackathon.controller;
 
 
 
