@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: razorai-backend
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/razorai_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: root
+    password: your_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+razorai:
+  payment:
+    max-transaction-limit: 10000.00
+    currency: INR
+  razorpay:
+    key-id: ${RAZORPAY_KEY_ID:rzp_test_demo_razorai}
+    key-secret: ${RAZORPAY_KEY_SECRET:secret_demo_razorai_key}
+    test-mode: true
+  gemini:
+    api-key: ${GEMINI_API_KEY:}
+    model: gemini-1.5-flash
+
+logging:
+  level:
+    com.razorai: INFO
+    org.hibernate.SQL: WARN
