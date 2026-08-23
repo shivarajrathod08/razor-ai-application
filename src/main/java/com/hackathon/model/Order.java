@@ -1,7 +1,7 @@
 package com.hackathon.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.razorai.model.enums.OrderStatus;
+import com.hackathon.model.enums.OrderStatus;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
